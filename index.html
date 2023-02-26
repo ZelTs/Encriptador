@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang = "es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Encriptador - Alura</title>
+        <link rel="shortcut icon" href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1680619f-eac2-428a-abae-415a5551168f/dfmlvc5-d7133793-a9bf-48d1-a4ae-3c662220c493.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzE2ODA2MTlmLWVhYzItNDI4YS1hYmFlLTQxNWE1NTUxMTY4ZlwvZGZtbHZjNS1kNzEzMzc5My1hOWJmLTQ4ZDEtYTRhZS0zYzY2MjIyMGM0OTMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.9SBIKUZPI_iudhwdYorDJfx2w2-rsMVPcKVI0zcpHJk">
+        <link rel="preload" href="style.css" as="style">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preload" href="normalize.css" as="style">
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="header">
+            <div class="contenedor">
+                    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1680619f-eac2-428a-abae-415a5551168f/dfmlvc5-d7133793-a9bf-48d1-a4ae-3c662220c493.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzE2ODA2MTlmLWVhYzItNDI4YS1hYmFlLTQxNWE1NTUxMTY4ZlwvZGZtbHZjNS1kNzEzMzc5My1hOWJmLTQ4ZDEtYTRhZS0zYzY2MjIyMGM0OTMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.9SBIKUZPI_iudhwdYorDJfx2w2-rsMVPcKVI0zcpHJk" width="120" height="120">
+                    <!--<img class="img-header" src="/Users/ZelTs/Desktop/Cursos de Programación/Alura/2 HTML & CSS/Encriptador/img/alura-logo-blanco.png">-->
+                    <h1>Encriptador de Texto</h1>
+            </div>
+        </header>
+
+        <main>
+            <section class="inputs-container">
+                <p class="txt-container">Escriba el mensaje a encriptar...</p>
+                <div class="inputs">
+                    <div class="textarea-container-left">
+                        <textarea class="textarea-left" id="txt-st" cols="45" rows="8" id="encrypt-msg"required></textarea>
+                    </div>
+                    <div class="textarea-container-right">
+                        <textarea class="textarea-right" id="txt-nd" id="msg" class="out-txt"></textarea>
+                    </div>
+                </div>
+
+
+                <div class="botones">
+                    <div>
+                        <button class="boton" type="button" id="bencrypt" class="btn-encrypt">Encriptar</button>
+                    </div>
+                    <div>
+                        <button class="boton" type="button" id="bunencrypt" class="btn-unencrypt">Desencriptar</button>
+                    </div>
+                    <div>
+                        <button class="btn" type="button" id="bcopy" class="btn-copy">Copiar</button>
+                    </div>
+                </div>    
+            </section>
+
+        </main>
+
+        <footer>
+            <img class="img-footer" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1680619f-eac2-428a-abae-415a5551168f/dfmlvdk-d8d672d3-aed0-49f3-b980-dba7c8b2b167.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzE2ODA2MTlmLWVhYzItNDI4YS1hYmFlLTQxNWE1NTUxMTY4ZlwvZGZtbHZkay1kOGQ2NzJkMy1hZWQwLTQ5ZjMtYjk4MC1kYmE3YzhiMmIxNjcucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.__rTR9AaKYjzHhGQ_yg4aTxjzOUSsVcxSDl_H_wwBN4">
+            <p class="text-footer">&copy Copyright ZelTs - 2022</p>
+        </footer>
+        <script src="app.js"></script>
+    </body>
+</html>
